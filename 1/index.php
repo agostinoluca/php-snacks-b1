@@ -25,7 +25,8 @@ $matchBasket = [
 <body>
     <h5>
         <?php
-        foreach ($matchBasket as $match) { ?> // oppure utilizzare :
+        foreach ($matchBasket as $match) { // oppure utilizzare : 
+        ?>
 
             <span>
                 <?php
@@ -33,7 +34,8 @@ $matchBasket = [
                 ?>
             </span>
 
-        <?php }; ?> // endforeach;
+        <?php }; // endforEach 
+        ?>
     </h5>
 </body>
 
