@@ -12,11 +12,12 @@ Starting Code:
 ?>*/
 $name = $_GET['name'];
 $welcome = false;
+$accessDenied = false;
 
 if (isset($name) && !empty($name)) {
     $welcome = true;
 } else {
-    echo "You can't access here";
+    $accessDenied = true;
 };
 
 ?>
@@ -40,6 +41,9 @@ if (isset($name) && !empty($name)) {
 
         <?php if ($welcome) : ?>
             <p>Benvenuto <?php echo $name ?>!</p>
+        <?php endif; ?>
+        <?php if ($accessDenied) : ?>
+            <p>You can't access here.</p>
         <?php endif; ?>
     </form>
 </body>
